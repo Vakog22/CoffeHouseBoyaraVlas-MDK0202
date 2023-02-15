@@ -12,7 +12,7 @@
 <b> Нет входа при неверном логине </b>
 ![image](https://user-images.githubusercontent.com/50378141/218975582-48348d7b-1da3-4d79-919c-03ee0bfc352c.png)
 
-<b> Регистрация </b>
+<b> Регистрация и порверка </b>
 ![image](https://user-images.githubusercontent.com/50378141/218975729-fb95eeb1-d4d9-4b14-841f-f5bde8fbabe8.png)
 ![image](https://user-images.githubusercontent.com/50378141/218975824-013081b7-daee-4def-8b1e-12ca0e401821.png)
 ![image](https://user-images.githubusercontent.com/50378141/218976023-394b33ca-c30b-49b0-90e1-835c4379289b.png)
