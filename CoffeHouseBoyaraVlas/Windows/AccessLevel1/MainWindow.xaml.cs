@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeHouseBoyaraVlas.Windows.Director;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace CoffeHouseBoyaraVlas
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_changeProd_Click(object sender, RoutedEventArgs e)
+        {
+            ProductChangeWindow productChangeWindow = new ProductChangeWindow();
+            productChangeWindow.Show();
+            this.Close();
         }
     }
 }

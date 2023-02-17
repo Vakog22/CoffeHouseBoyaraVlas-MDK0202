@@ -52,12 +52,12 @@ namespace CoffeHouseBoyaraVlas.Windows
 
             if (AuthUser != null)
             {
-                //MainWindow mainWindow = new MainWindow();
-                //mainWindow.Show();
-                //this.Close();\
-                ProfileWindow profile = new ProfileWindow();
-                profile.Show();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
                 this.Close();
+                //ProfileWindow profile = new ProfileWindow();
+                //profile.Show();
+                //this.Close();
             }
             else
             {

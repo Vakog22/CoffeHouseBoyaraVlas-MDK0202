@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="ProductChangeWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock x:Name="TBL_ProductID" Text="1"/>
+            <Label Content="Наименование продаваемого юнита продукции кофейни"/>
+            <TextBox x:Name="TB_ProdName"/>
+            <Label Content="Цена"/>
+            <TextBox x:Name="TB_ProdPrice"/>
+            <Label Content="Описание"/>
+            <TextBox x:Name="TB_ProdDesc"/>
+            <Button x:Name="BTN_SelectPhoto" Content="Выбрать фото" Click="BTN_SelectPhoto_Click"/>
+            <Button x:Name="BTN_Confirm" Content="Подтвердить" Click="BTN_Confirm_Click"/>
+            <Image x:Name="I_Photo"/>
+        </StackPanel>
     </Grid>
 </Window>
