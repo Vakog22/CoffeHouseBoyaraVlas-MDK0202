@@ -5,19 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeHouseBoyaraVlas.Windows.Director"
         mc:Ignorable="d"
-        Title="ProductChangeWindow" Height="450" Width="800">
+        Title="ProductChangeWindow" Height="450" Width="800" Background="ForestGreen">
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
             <TextBlock x:Name="TBL_ProductID" Text="1"/>
-            <Label Content="Наименование продаваемого юнита продукции кофейни"/>
-            <TextBox x:Name="TB_ProdName"/>
-            <Label Content="Цена"/>
-            <TextBox x:Name="TB_ProdPrice"/>
-            <Label Content="Описание"/>
-            <TextBox x:Name="TB_ProdDesc"/>
-            <Button x:Name="BTN_SelectPhoto" Content="Выбрать фото" Click="BTN_SelectPhoto_Click"/>
-            <Button x:Name="BTN_Confirm" Content="Подтвердить" Click="BTN_Confirm_Click"/>
-            <Image x:Name="I_Photo"/>
+            <Label Content="Наименование" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_ProdName" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Цена" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_ProdPrice" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Описание" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_ProdDesc" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Button x:Name="BTN_Confirm" Content="Подтвердить" Click="BTN_Confirm_Click" Margin="50,8,50,0" Background="#FF634919" Foreground="White"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Image x:Name="I_Photo" Source="C:\Users\IMac2\source\repos\CoffeHouseBoyaraVlas\CoffeHouseBoyaraVlas\Res\logo.png" Margin="40"/>
+            <Button x:Name="BTN_SelectPhoto" Content="Выбрать фото" Click="BTN_SelectPhoto_Click" Margin="50,0,50,10" Background="#FF634919" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>
