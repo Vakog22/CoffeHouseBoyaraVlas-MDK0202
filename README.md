@@ -17,3 +17,10 @@
 ![image](https://user-images.githubusercontent.com/50378141/218975824-013081b7-daee-4def-8b1e-12ca0e401821.png)
 ![image](https://user-images.githubusercontent.com/50378141/218976023-394b33ca-c30b-49b0-90e1-835c4379289b.png)
 ![image](https://user-images.githubusercontent.com/50378141/218976429-46d2526e-d5e7-4adc-815d-56532da5c21c.png)
+
+<b> Добавление товара </b>
+![image](https://user-images.githubusercontent.com/50378141/219850335-587a7b5d-85cb-454a-b5e8-af3077325bab.png)
+![image](https://user-images.githubusercontent.com/50378141/219850386-d83eb516-620c-47da-8c5e-e18680ee40df.png)
+![image](https://user-images.githubusercontent.com/50378141/219850405-20fea3b3-c0d0-454a-90c5-88f774a97135.png)
+![image](https://user-images.githubusercontent.com/50378141/219850358-695791c1-3e84-4dda-8e83-e7cd3ffd360e.png)
+![image](https://user-images.githubusercontent.com/50378141/219850365-7048495a-d0ab-4601-9b73-ebc8c574682e.png)
