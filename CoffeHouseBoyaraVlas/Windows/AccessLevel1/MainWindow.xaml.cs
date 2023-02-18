@@ -1,4 +1,5 @@
-﻿using CoffeHouseBoyaraVlas.Windows.Director;
+﻿using CoffeHouseBoyaraVlas.Windows;
+using CoffeHouseBoyaraVlas.Windows.Director;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,15 +22,25 @@ namespace CoffeHouseBoyaraVlas
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        int IDAccount;
+        public MainWindow(int a)
         {
+            IDAccount = a;
             InitializeComponent();
+            IdShow.Text = a.ToString();
         }
 
         private void btn_changeProd_Click(object sender, RoutedEventArgs e)
         {
             ProductChangeWindow productChangeWindow = new ProductChangeWindow();
             productChangeWindow.Show();
+            this.Close();
+        }
+
+        private void btn_editAccount_Click(object sender, RoutedEventArgs e)
+        {
+            ProfileWindow profileWindow = new ProfileWindow(IDAccount);
+            profileWindow.Show();
             this.Close();
         }
     }

@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeHouseBoyaraVlas.Windows"
         mc:Ignorable="d"
-        Title="ProfileWindow" Height="450" Width="800">
+        Title="ProfileWindow" Height="500" Width="800">
     <Grid>
         <StackPanel>
+            <TextBlock x:Name="IdAcc"/>
             <TextBlock Text="Введите Имя"
                    FontSize="20"
                    FontWeight="UltraLight"
@@ -40,8 +41,8 @@
             <TextBox x:Name="TbEmail"
                  Height="24"
                  Margin="30 0 30 0"/>
-            <ComboBox/>
-            <Button Height="30"/>
+            <ComboBox x:Name="CMBGender"/>
+            <Button Height="30" Content="Да" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>

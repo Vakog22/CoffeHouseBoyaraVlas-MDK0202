@@ -52,7 +52,7 @@ namespace CoffeHouseBoyaraVlas.Windows
 
             if (AuthUser != null)
             {
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(AuthUser.IdAccount);
                 mainWindow.Show();
                 this.Close();
                 //ProfileWindow profile = new ProfileWindow();
