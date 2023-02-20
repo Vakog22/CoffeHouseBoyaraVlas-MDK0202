@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeHouseBoyaraVlas.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static CoffeHouseBoyaraVlas.ClassHelper.EFHelper;
 
 namespace CoffeHouseBoyaraVlas.Pages
 {
@@ -23,6 +25,10 @@ namespace CoffeHouseBoyaraVlas.Pages
         public ProductShow()
         {
             InitializeComponent();
+
+            List<Product> ProductList = new List<Product>();
+            ProductList = Context.Product.ToList();
+            LvProductList.ItemsSource = ProductList;
         }
     }
 }

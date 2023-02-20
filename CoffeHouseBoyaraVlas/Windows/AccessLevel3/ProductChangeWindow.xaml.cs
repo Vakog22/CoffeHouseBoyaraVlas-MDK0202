@@ -55,7 +55,7 @@ namespace CoffeHouseBoyaraVlas.Windows.Director
             product.Name = TB_ProdName.Text;
             product.Price = d;
             product.Description = TB_ProdDesc.Text;
-            product.PhotoPath = filePath;
+            product.PhotoPath = File.ReadAllBytes(filePath);
 
             EFHelper.Context.Product.Add(product);
             EFHelper.Context.SaveChanges();

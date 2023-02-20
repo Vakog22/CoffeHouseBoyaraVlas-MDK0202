@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="90d5091c8c96428d965f2622ec64e3d7" Name="Diagram1">
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Account" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Client" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Employee" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Product" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Role" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Sale" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.SaleProduct" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Client_Account" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Employee_Account" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Sale_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Employee_Role" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Sale_Employee" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Sale" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Account" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Client" Width="1.5" PointX="3" PointY="7.625" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Employee" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Product" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Role" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.Sale" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.SaleProduct" Width="1.5" PointX="7.5" PointY="5.625" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Client_Account" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Employee_Account" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Sale_Client" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Employee_Role" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Sale_Employee" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Product" />
+        <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Sale" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

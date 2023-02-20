@@ -1,4 +1,6 @@
-﻿using CoffeHouseBoyaraVlas.Windows;
+﻿using CoffeHouseBoyaraVlas.DB;
+using CoffeHouseBoyaraVlas.Pages;
+using CoffeHouseBoyaraVlas.Windows;
 using CoffeHouseBoyaraVlas.Windows.Director;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,8 @@ namespace CoffeHouseBoyaraVlas
             IDAccount = a;
             InitializeComponent();
             IdShow.Text = a.ToString();
+            ProductShow PS = new ProductShow();
+            F_MainFrame.Navigate(PS);
         }
 
         private void btn_changeProd_Click(object sender, RoutedEventArgs e)
