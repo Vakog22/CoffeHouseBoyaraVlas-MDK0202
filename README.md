@@ -24,3 +24,6 @@
 ![image](https://user-images.githubusercontent.com/50378141/219850405-20fea3b3-c0d0-454a-90c5-88f774a97135.png)
 ![image](https://user-images.githubusercontent.com/50378141/219850358-695791c1-3e84-4dda-8e83-e7cd3ffd360e.png)
 ![image](https://user-images.githubusercontent.com/50378141/219850365-7048495a-d0ab-4601-9b73-ebc8c574682e.png)
+
+<b> Показ товаров (Page в окне) </b>
+![image](https://user-images.githubusercontent.com/50378141/220129330-a54692d9-7006-4166-bad8-e4229e91d148.png)
