@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\CurentUserData.cs" />
     <Compile Include="ClassHelper\EFHelper.cs" />
     <Compile Include="DB\Account.cs">
       <DependentUpon>Model.tt</DependentUpon>

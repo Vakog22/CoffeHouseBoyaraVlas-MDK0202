@@ -22,12 +22,9 @@ namespace CoffeHouseBoyaraVlas.Windows
     /// </summary>
     public partial class ProfileWindow : Window
     {
-        int IdAccount;
-        public ProfileWindow(int a)
+        public ProfileWindow()
         {
-            IdAccount = a;
             InitializeComponent();
-            IdAcc.Text = a.ToString();
 
             CMBGender.ItemsSource = new List<bool>() { true, false};
         }
@@ -41,7 +38,7 @@ namespace CoffeHouseBoyaraVlas.Windows
                 }
 
             DB.Client client = new DB.Client();
-            client.IdAccount = IdAccount;
+            client.IdAccount = ClassHelper.CurentUserData.account.IdAccount;
             client.Surename = TbSurename.Text;
             client.Name = TbName.Text;
             client.Email = TbEmail.Text;

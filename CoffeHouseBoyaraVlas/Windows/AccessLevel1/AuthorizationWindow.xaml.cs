@@ -52,7 +52,8 @@ namespace CoffeHouseBoyaraVlas.Windows
 
             if (AuthUser != null)
             {
-                MainWindow mainWindow = new MainWindow(AuthUser.IdAccount);
+                ClassHelper.CurentUserData.account = AuthUser;
+                MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
                 //ProfileWindow profile = new ProfileWindow();

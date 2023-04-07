@@ -20,13 +20,14 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.RowSpan="4">
             <TextBlock x:Name="IdShow" Margin="0 20" Height="50"/>
+           <Button x:Name="btn_editAccount" Content="Акк" Click="btn_editAccount_Click"  Margin="10 20" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
             <Button x:Name="btn_changeProd" Content="Добавить продукт" Click="btn_changeProd_Click" 
                     Margin="10 20" Height="70"
                     Background="#FF634919"
                     Foreground="Wheat"/>
-            <Button x:Name="btn_editAccount" Content="Акк" Click="btn_editAccount_Click"  Margin="10 20" Height="70"
-                    Background="#FF634919"
-                    Foreground="Wheat"/>
+            
         </StackPanel>
         <Frame x:Name="F_MainFrame" Grid.Column="1" Grid.Row="2" />
 

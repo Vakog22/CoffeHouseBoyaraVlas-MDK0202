@@ -24,12 +24,11 @@ namespace CoffeHouseBoyaraVlas
     /// </summary>
     public partial class MainWindow : Window
     {
-        int IDAccount;
-        public MainWindow(int a)
+        public MainWindow()
         {
-            IDAccount = a;
             InitializeComponent();
-            IdShow.Text = a.ToString();
+            btnAvalibaleChek();
+            
             ProductShow PS = new ProductShow();
             F_MainFrame.Navigate(PS);
         }
@@ -43,9 +42,20 @@ namespace CoffeHouseBoyaraVlas
 
         private void btn_editAccount_Click(object sender, RoutedEventArgs e)
         {
-            ProfileWindow profileWindow = new ProfileWindow(IDAccount);
+            ProfileWindow profileWindow = new ProfileWindow();
             profileWindow.Show();
             this.Close();
+        }
+
+        private void btnAvalibaleChek()
+        {
+            if((ClassHelper.EFHelper.Context.Employee.ToList().Where(i=> i.IdAccount == ClassHelper.CurentUserData.account.IdAccount)).FirstOrDefault() != null )
+            {
+            }
+            else
+            {
+                btn_changeProd.IsEnabled = false;
+            }
         }
     }
 }
