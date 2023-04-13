@@ -27,3 +27,13 @@
 
 <b> Показ товаров (Page в окне) </b>
 ![image](https://user-images.githubusercontent.com/50378141/220129330-a54692d9-7006-4166-bad8-e4229e91d148.png)
+
+<b> Окна в зависимости от аккаунта</b>
+<b>Директор</b>
+![image](https://user-images.githubusercontent.com/50378141/231678973-3a3dcb44-836e-49fc-ac4e-951a8a7208c0.png)
+<b>Рабочий</b>
+![image](https://user-images.githubusercontent.com/50378141/231679021-75e56ca1-4712-4eff-8281-ecbb913c6850.png)
+
+<b> Окна сотрудников и клиентов </b>
+![image](https://user-images.githubusercontent.com/50378141/231679077-8f2a14ee-e879-4d3a-a67c-fa634a56da43.png)
+![image](https://user-images.githubusercontent.com/50378141/231679113-770de8ad-41c2-4c72-aaa7-570050b9d8c4.png)
