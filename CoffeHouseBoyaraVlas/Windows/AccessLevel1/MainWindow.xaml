@@ -9,8 +9,8 @@
     <Grid>
         
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -19,17 +19,45 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.RowSpan="4">
-            <TextBlock x:Name="IdShow" Margin="0 20" Height="50"/>
-           <Button x:Name="btn_editAccount" Content="Акк" Click="btn_editAccount_Click"  Margin="10 20" Height="70"
+            <TextBlock x:Name="IdShow" Margin="0 20" Height="50" Text="Кофейня"  Foreground="Wheat" TextAlignment="Center" FontSize="40"/>
+
+            <Button x:Name="btn_MenuShow" Margin="10 20" Height="70"
+                    Background="#FF634919"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Foreground="Wheat"
+                    
+                    Visibility="Collapsed"
+                    
+                    />
+            <Button x:Name="btn_editAccount" Content="Акк" Click="btn_editAccount_Click"  Margin="10 5" Height="70"
                     Background="#FF634919"
                     Foreground="Wheat"/>
-            <Button x:Name="btn_changeProd" Content="Добавить продукт" Click="btn_changeProd_Click" 
-                    Margin="10 20" Height="70"
+            <Button x:Name="btn_products" Content="Продукты" Click="btn_products_Click"
+                    Margin="10 5" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            <Button x:Name="btn_employees" Content="Работники" Click="btn_employees_Click"  Margin="10 5" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            <Button x:Name="btn_clients" Content="Клиенты" Click="btn_clients_Click"  Margin="10 5" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            <Button x:Name="btn_addProd" Content="Добавить" Click="btn_changeProd_Click" 
+                    Margin="10 5" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            <Button x:Name="btn_Change" Content="Изменить" Click="btn_changeProd_Click" 
+                    Margin="10 5" Height="70"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            <Button x:Name="btn_Delete" Content="Удалить" Click="btn_changeProd_Click" 
+                    Margin="10 5" Height="70"
                     Background="#FF634919"
                     Foreground="Wheat"/>
             
         </StackPanel>
-        <Frame x:Name="F_MainFrame" Grid.Column="1" Grid.Row="2" />
+        <Frame x:Name="F_MainFrame" Grid.Column="1" Grid.Row="2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

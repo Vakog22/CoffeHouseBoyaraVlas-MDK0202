@@ -33,7 +33,7 @@
         <TextBox x:Name="TbLogin"
                  Height="24"
                  Margin="30 0 30 0" Background="#FFBCE2A7" BorderBrush="{x:Null}"
-                 Text="test">
+                 Text="1">
         </TextBox>
 
         <TextBlock Text="Введите пароль"
@@ -44,7 +44,7 @@
         <PasswordBox x:Name="PbPassword"
                  Height="24"
                  Margin="30 0 30 0" BorderBrush="{x:Null}" Background="#FFBCE2A7"
-                     Password="test"/>
+                     Password="1"/>
 
         <Button x:Name="BtnLogin"
                 Content="Войти"

@@ -49,5 +49,13 @@ namespace CoffeHouseBoyaraVlas.Windows
             EFHelper.Context.SaveChanges();
             MessageBox.Show("Ништяк");
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

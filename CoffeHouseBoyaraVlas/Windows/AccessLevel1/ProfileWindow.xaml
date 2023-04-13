@@ -8,6 +8,7 @@
         Title="ProfileWindow" Height="500" Width="800">
     <Grid>
         <StackPanel>
+            <Button x:Name="btnBack" Click="btnBack_Click" Content="Назад"/>
             <TextBlock x:Name="IdAcc"/>
             <TextBlock Text="Введите Имя"
                    FontSize="20"

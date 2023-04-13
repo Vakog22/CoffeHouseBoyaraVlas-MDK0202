@@ -47,15 +47,38 @@ namespace CoffeHouseBoyaraVlas
             this.Close();
         }
 
+        private void btn_clients_Click(object sender, RoutedEventArgs e)
+        {
+            ClientPage EP = new ClientPage();
+            F_MainFrame.Navigate(EP);
+        }
+
+        private void btn_employees_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeePage EP = new EmployeePage();
+            F_MainFrame.Navigate(EP);
+        }
+
         private void btnAvalibaleChek()
         {
-            if((ClassHelper.EFHelper.Context.Employee.ToList().Where(i=> i.IdAccount == ClassHelper.CurentUserData.account.IdAccount)).FirstOrDefault() != null )
+            if ((ClassHelper.EFHelper.Context.Employee.ToList().Where(i => i.IdAccount == ClassHelper.CurentUserData.account.IdAccount && i.IdRole == 1)).FirstOrDefault() != null)
             {
+
             }
             else
             {
-                btn_changeProd.IsEnabled = false;
+                btn_addProd.Visibility = Visibility.Collapsed;
+                btn_clients.Visibility = Visibility.Collapsed;
+                btn_employees.Visibility = Visibility.Collapsed;
+                btn_Change.Visibility = Visibility.Collapsed;
+                btn_Delete.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void btn_products_Click(object sender, RoutedEventArgs e)
+        {
+            ProductShow PS = new ProductShow();
+            F_MainFrame.Navigate(PS);
         }
     }
 }
