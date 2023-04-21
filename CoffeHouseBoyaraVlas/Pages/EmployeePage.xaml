@@ -9,71 +9,87 @@
       Title="EmployeePage">
 
     <Grid>
-        <Border BorderBrush="#FF634919"
+        <StackPanel>
+            <WrapPanel Height="50" Background="#FF43BF43">
+                <Button x:Name="btn_addProd" Content="Добавить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat" Click="btn_addProd_Click"/>
+                <Button x:Name="btn_Change" Content="Изменить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat" Click="btn_Change_Click"/>
+                <Button x:Name="btn_Delete" Content="Удалить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+            </WrapPanel>
+            <Border BorderBrush="#FF634919"
                             BorderThickness="3">
 
 
-            <ListView x:Name="LvEmployeeList"
+                <ListView x:Name="LvEmployeeList"
                   d:ItemsSource="{d:SampleData ItemCount=10}"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF43BF43">
 
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel/>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Border BorderBrush="#FF634919"
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#FF634919"
                             BorderThickness="1"
                             Height="200"
                                 Width="220">
-                            <StackPanel Background="#FFBCE2A7">
-                                <TextBlock Text="{Binding Name}"
+                                <StackPanel Background="#FFBCE2A7">
+                                    <TextBlock Text="{Binding Name}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
 
-                                <TextBlock Text="{Binding Surename}"
+                                    <TextBlock Text="{Binding Surename}"
                                        FontSize="14"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding Patronimyc}"
+                                    <TextBlock Text="{Binding Patronimyc}"
                                        FontSize="14"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding Role.Name}"
+                                    <TextBlock Text="{Binding Role.Name}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding DateOfBirth}"
+                                    <TextBlock Text="{Binding DateOfBirth}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding DateOfEmployment}"
+                                    <TextBlock Text="{Binding DateOfEmployment}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding Email}"
+                                    <TextBlock Text="{Binding Email}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding IsMale}"
+                                    <TextBlock Text="{Binding IsMale}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                                <TextBlock Text="{Binding Account.Login}"
+                                    <TextBlock Text="{Binding Account.Login}"
                                        FontSize="12"
                                        FontWeight="Bold"
                                        Margin="5 0 5 0"/>
-                            </StackPanel>
-                        </Border>
+                                </StackPanel>
+                            </Border>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
-        </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

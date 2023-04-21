@@ -1,0 +1,36 @@
+﻿<Window x:Class="CoffeHouseBoyaraVlas.Windows.AccessLevel3.WorkerChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeHouseBoyaraVlas.Windows.AccessLevel3"
+        mc:Ignorable="d"
+        Title="WorkerChangeWindow" Height="600" Width="400" Background="ForestGreen">
+    <Grid>
+        <StackPanel>
+            <Label Content="Имя" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_Name" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Фамилия" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_Surename" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Отчество" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TB_Patronimic" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Должность" Margin="10,0,10,0" FontSize="16"/>
+            <ComboBox x:Name="CB_IdRole" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="ДР" Margin="10,0,10,0" FontSize="16"/>
+            <DatePicker x:Name="DpDateOfBirth" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Дата найма" Margin="10,0,10,0" FontSize="16"/>
+            <DatePicker x:Name="DpDateOfEmploy" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Мыло" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TbEmail" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Мужик?" Margin="10,0,10,0" FontSize="16"/>
+            <ComboBox x:Name="CB_IsMale" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Separator Margin="10"/>
+            <Label Content="Логин" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TbLogin" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+            <Label Content="Пароль" Margin="10,0,10,0" FontSize="16"/>
+            <TextBox x:Name="TbPassword" Margin="10,0,10,0" Background="#FFBCE2A7"/>
+
+            <Button x:Name="BTN_Confirm" Content="Подтвердить" Click="BTN_Confirm_Click" Margin="50,8,50,0" Background="#FF634919" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,42 @@ namespace CoffeHouseBoyaraVlas.Pages
         public Basket()
         {
             InitializeComponent();
+            GetListProduct();
+        }
+
+        private void GetListProduct()
+        {
+            ObservableCollection<DB.Product> stuffs = new ObservableCollection<DB.Product>(ClassHelper.BasketHelper.products);
+
+             LvProductList.ItemsSource = stuffs;
+             
+             
+        }
+
+        private void btn_AddToBasket_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            var selectedProduct = button.DataContext as DB.Product;
+
+
+            if (selectedProduct != null)
+            {
+                if (ClassHelper.BasketHelper.products.Contains(selectedProduct) && selectedProduct.Quantity>1)
+                {
+                    selectedProduct.Quantity--;
+                }
+                else
+                {
+                    ClassHelper.BasketHelper.products.Remove(selectedProduct);
+                }
+                
+            }
+            GetListProduct();
         }
     }
 }

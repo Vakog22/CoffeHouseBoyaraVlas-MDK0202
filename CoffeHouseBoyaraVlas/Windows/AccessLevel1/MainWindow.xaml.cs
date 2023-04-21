@@ -33,13 +33,6 @@ namespace CoffeHouseBoyaraVlas
             F_MainFrame.Navigate(PS);
         }
 
-        private void btn_changeProd_Click(object sender, RoutedEventArgs e)
-        {
-            ProductChangeWindow productChangeWindow = new ProductChangeWindow();
-            productChangeWindow.Show();
-            this.Close();
-        }
-
         private void btn_editAccount_Click(object sender, RoutedEventArgs e)
         {
             ProfileWindow profileWindow = new ProfileWindow();
@@ -67,11 +60,8 @@ namespace CoffeHouseBoyaraVlas
             }
             else
             {
-                btn_addProd.Visibility = Visibility.Collapsed;
                 btn_clients.Visibility = Visibility.Collapsed;
                 btn_employees.Visibility = Visibility.Collapsed;
-                btn_Change.Visibility = Visibility.Collapsed;
-                btn_Delete.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -79,6 +69,12 @@ namespace CoffeHouseBoyaraVlas
         {
             ProductShow PS = new ProductShow();
             F_MainFrame.Navigate(PS);
+        }
+
+        private void btn_busket_Click(object sender, RoutedEventArgs e)
+        {
+            Basket basket = new Basket();
+            F_MainFrame.Navigate(basket);
         }
     }
 }

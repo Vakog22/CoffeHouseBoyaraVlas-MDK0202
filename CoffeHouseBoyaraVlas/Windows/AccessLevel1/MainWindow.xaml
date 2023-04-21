@@ -43,18 +43,10 @@
             <Button x:Name="btn_clients" Content="Клиенты" Click="btn_clients_Click"  Margin="10 5" Height="70"
                     Background="#FF634919"
                     Foreground="Wheat"/>
-            <Button x:Name="btn_addProd" Content="Добавить" Click="btn_changeProd_Click" 
-                    Margin="10 5" Height="70"
+            <Button x:Name="btn_busket" Content="Корзина" Click="btn_busket_Click"  Margin="10 5" Height="70"
                     Background="#FF634919"
                     Foreground="Wheat"/>
-            <Button x:Name="btn_Change" Content="Изменить" Click="btn_changeProd_Click" 
-                    Margin="10 5" Height="70"
-                    Background="#FF634919"
-                    Foreground="Wheat"/>
-            <Button x:Name="btn_Delete" Content="Удалить" Click="btn_changeProd_Click" 
-                    Margin="10 5" Height="70"
-                    Background="#FF634919"
-                    Foreground="Wheat"/>
+           
             
         </StackPanel>
         <Frame x:Name="F_MainFrame" Grid.Column="1" Grid.Row="2" NavigationUIVisibility="Hidden"/>

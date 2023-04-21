@@ -9,6 +9,87 @@
       Title="Basket">
 
     <Grid>
-        
+        <StackPanel>
+            <!--<WrapPanel Height="50" Background="#FF43BF43">
+                <Button x:Name="btn_addProd" Content="Добавить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat" Click="btn_addProd_Click"/>
+                <Button x:Name="btn_Change" Content="Изменить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat" Click="btn_Change_Click"/>
+                <Button x:Name="btn_Delete" Content="Удалить"
+                    Margin="10 5" Height="40"
+                    Background="#FF634919"
+                    Foreground="Wheat"/>
+
+            </WrapPanel>-->
+            <Border BorderBrush="#FF634919"
+                            BorderThickness="3">
+
+
+                <ListView x:Name="LvProductList"
+                  d:ItemsSource="{d:SampleData ItemCount=10}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="#FF43BF43"  >
+
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#FF634919"
+                            BorderThickness="3"
+                            Margin="5"
+                            Width="200"
+                            Height="250">
+                                <StackPanel Background="#FFBCE2A7">
+                                    <Image Height="170"
+                                   Width="200"
+                                   >
+                                        <Image.Source>
+                                            <Binding Path="PhotoPath">
+                                                <Binding.TargetNullValue>
+                                                    <ImageSource>C:\Users\IMac2\source\repos\CoffeHouseBoyaraVlas\CoffeHouseBoyaraVlas\Res\logo.png</ImageSource>
+                                                </Binding.TargetNullValue>
+                                            </Binding>
+                                        </Image.Source>
+                                    </Image>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel HorizontalAlignment="Left" >
+                                            <TextBlock Text="{Binding Name}"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 80 0"/>
+
+                                            <TextBlock Text="{Binding Price}"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 80 0"/>
+                                            <TextBlock Text="{Binding Quantity}"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 80 0"/>
+                                        </StackPanel>
+                                        <Button x:Name="btn_AddToBasket" Content="Удалить&#xD;&#xA;из корзины"
+                    Background="#FF634919" 
+                                                Margin="3"
+                    Foreground="Wheat" HorizontalAlignment="Right" Click="btn_AddToBasket_Click"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                            </Border>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+
+        </StackPanel>
+
+
     </Grid>
 </Page>

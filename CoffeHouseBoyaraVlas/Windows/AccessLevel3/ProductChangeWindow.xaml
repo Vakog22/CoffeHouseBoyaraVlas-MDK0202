@@ -12,7 +12,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <TextBlock x:Name="TBL_ProductID" Text="1"/>
             <Label Content="Наименование" Margin="10,0,10,0" FontSize="16"/>
             <TextBox x:Name="TB_ProdName" Margin="10,0,10,0" Background="#FFBCE2A7"/>
             <Label Content="Цена" Margin="10,0,10,0" FontSize="16"/>

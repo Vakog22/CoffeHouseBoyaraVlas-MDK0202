@@ -17,8 +17,7 @@ using static Microsoft.Win32.OpenFileDialog;
 using CoffeHouseBoyaraVlas.ClassHelper;
 using Microsoft.Win32;
 using static CoffeHouseBoyaraVlas.ClassHelper.EFHelper;
-
-
+using CoffeHouseBoyaraVlas.DB;
 
 namespace CoffeHouseBoyaraVlas.Windows.Director
 {
@@ -27,10 +26,36 @@ namespace CoffeHouseBoyaraVlas.Windows.Director
     /// </summary>
     public partial class ProductChangeWindow : Window
     {
+        int ind;
         string filePath = string.Empty;
-        public ProductChangeWindow()
+        public ProductChangeWindow(int a)
         {
-            InitializeComponent();
+            ind = a;
+            if (a == 0)
+            {
+                InitializeComponent();
+            }
+            else {
+                InitializeComponent();
+                Product product = new Product();
+                product = EFHelper.Context.Product.ToList().Where(i => i.IdProduct == a).FirstOrDefault();
+                TB_ProdName.Text = product.Name;
+                TB_ProdDesc.Text = product.Description;
+                TB_ProdPrice.Text = product.Price.ToString();
+                if (product.PhotoPath != null)
+                {
+                    MemoryStream stream = new MemoryStream(product.PhotoPath);
+                    I_Photo.Source = BitmapFrame.Create(stream, BitmapCreateOptions.None, BitmapCacheOption.None);
+                }
+                else 
+                { 
+                    BitmapImage bim = new BitmapImage();
+                    bim.BeginInit();
+                    bim.UriSource = new Uri(@"\Res\logo.png", UriKind.Relative);
+                    bim.EndInit();
+                    I_Photo.Source = bim;
+                }
+            }
         }
 
         private void BTN_Confirm_Click(object sender, RoutedEventArgs e)
@@ -50,16 +75,28 @@ namespace CoffeHouseBoyaraVlas.Windows.Director
                 MessageBox.Show("Цена не число или типа того");
                 return;
             }
+            if (ind == 0)
+            {
+                DB.Product product = new DB.Product();
+                product.Name = TB_ProdName.Text;
+                product.Price = d;
+                product.Description = TB_ProdDesc.Text;
+                product.PhotoPath = File.ReadAllBytes(filePath);
 
-            DB.Product product = new DB.Product();
-            product.Name = TB_ProdName.Text;
-            product.Price = d;
-            product.Description = TB_ProdDesc.Text;
-            product.PhotoPath = File.ReadAllBytes(filePath);
+                EFHelper.Context.Product.Add(product);
+                EFHelper.Context.SaveChanges();
+                MessageBox.Show("Вы успешно добавили товаръ");
+            }
+            else {
+                DB.Product product = EFHelper.Context.Product.ToList().Where(i => i.IdProduct == ind).FirstOrDefault();
+                product.Name = TB_ProdName.Text;
+                product.Price = d;
+                product.Description = TB_ProdDesc.Text;
+                EFHelper.Context.SaveChanges();
+                MessageBox.Show("Вы успешно изменили товаръ");
+            }
 
-            EFHelper.Context.Product.Add(product);
-            EFHelper.Context.SaveChanges();
-            MessageBox.Show("Вы успешно добавили товаръ");
+            
         }
 
         private void BTN_SelectPhoto_Click(object sender, RoutedEventArgs e)
