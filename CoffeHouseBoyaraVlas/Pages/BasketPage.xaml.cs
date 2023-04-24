@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoffeHouseBoyaraVlas.ClassHelper;
+using CoffeHouseBoyaraVlas.DB;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -60,6 +62,35 @@ namespace CoffeHouseBoyaraVlas.Pages
                 
             }
             GetListProduct();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            decimal fullCost=0;
+            if (BasketHelper.products.Count > 0) {
+                Sale sale = new Sale();
+                sale.IdClient = 0;
+                sale.IdEmployee = CurentUserData.SearchforId();
+                sale.Date = DateTime.Now;
+                EFHelper.Context.Sale.Add(sale);
+                EFHelper.Context.SaveChanges();
+
+                SaleProduct saleProduct = new SaleProduct();
+
+                int saleID = EFHelper.Context.Sale.ToList().LastOrDefault().IdSale;
+                foreach (var  prod in BasketHelper.products)
+                {
+                    saleProduct.IdProduct = prod.IdProduct;
+                    saleProduct.IdSale = saleID;
+                    saleProduct.Quantity = prod.Quantity;
+                    fullCost += (EFHelper.Context.Product.ToList().Where(i => i.IdProduct == prod.IdProduct).FirstOrDefault().Price) * prod.Quantity;
+
+                }
+                EFHelper.Context.SaleProduct.Add(saleProduct);
+                EFHelper.Context.SaveChanges();
+            }
+            MessageBox.Show("Вы заплатили "+ fullCost.ToString() + " денег" );
+            
         }
     }
 }

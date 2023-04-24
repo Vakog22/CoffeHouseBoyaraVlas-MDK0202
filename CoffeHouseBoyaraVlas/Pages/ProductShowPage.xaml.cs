@@ -84,6 +84,7 @@ Button button = sender as Button;
                 }
                 else
                 {
+                    selectedProduct.Quantity++;
                     ClassHelper.BasketHelper.products.Add(selectedProduct);
                 }
             }

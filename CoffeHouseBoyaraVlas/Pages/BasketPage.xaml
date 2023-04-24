@@ -9,6 +9,10 @@
       Title="Basket">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <StackPanel>
             <!--<WrapPanel Height="50" Background="#FF43BF43">
                 <Button x:Name="btn_addProd" Content="Добавить"
@@ -82,14 +86,15 @@
                                 </StackPanel>
 
                             </Border>
-
+                        
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Border>
 
         </StackPanel>
-
+        
+        <Button Grid.Row="1" Content="КУПИТЬ!!!" Click="Button_Click"/>
 
     </Grid>
 </Page>

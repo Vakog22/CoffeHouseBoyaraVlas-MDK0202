@@ -54,6 +54,7 @@ namespace CoffeHouseBoyaraVlas.Windows
             {
                 ClassHelper.CurentUserData.account = AuthUser;
                 MainWindow mainWindow = new MainWindow();
+                CurentUserData.SearchforId();
                 mainWindow.Show();
                 this.Close();
                 //ProfileWindow profile = new ProfileWindow();
