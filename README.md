@@ -46,4 +46,8 @@
 ![image](https://user-images.githubusercontent.com/50378141/233962526-639ec012-779a-4eb2-96ee-0291bcf98fb8.png)
 ![image](https://user-images.githubusercontent.com/50378141/233963546-08cd1e0d-5b44-4342-903f-8b4ad028356e.png)
 
-
+<b> Статистика </b>
+![image](https://user-images.githubusercontent.com/50378141/234866491-451010d3-b540-43c1-92b3-ff8fe524dbb2.png)
+![image](https://user-images.githubusercontent.com/50378141/234866743-03e8ab90-8833-450b-819d-25a33c7c7a2f.png)
+![image](https://user-images.githubusercontent.com/50378141/234866897-38835557-62b5-461f-85cf-a8f6c70b9ab4.png)
+![image](https://user-images.githubusercontent.com/50378141/234867121-5991d5c8-8bf7-4952-b3a7-fba9d8f0f187.png)
