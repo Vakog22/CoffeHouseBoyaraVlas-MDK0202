@@ -20,6 +20,7 @@
         <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_Sale_Employee" />
         <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Product" />
         <AssociationConnector Association="DBCoffee_VlasovBoyarskiyModel.FK_SaleProduct_Sale" />
+        <EntityTypeShape EntityType="DBCoffee_VlasovBoyarskiyModel.VW_SaleStats" Width="1.5" PointX="5.375" PointY="8.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

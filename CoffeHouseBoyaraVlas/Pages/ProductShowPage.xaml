@@ -47,7 +47,7 @@
                             BorderThickness="3"
                             Margin="5"
                             Width="200"
-                            Height="250">
+                            Height="280">
                                 <StackPanel Background="#FFBCE2A7">
                                     <Image Height="170"
                                    Width="200"
@@ -71,10 +71,14 @@
                                        FontSize="18"
                                        FontWeight="Bold"
                                        Margin="10 0 80 0"/>
-                                    </StackPanel>
-                                    <Button x:Name="btn_AddToBasket" Content="Добавить&#xD;&#xA;в корзину"
+                                            <Button 
+                                                FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="10 0 80 0" x:Name="btn_AddToBasket" Content="Добавить&#xD;&#xA;в корзину"
                     Background="#FF634919" 
-                    Foreground="Wheat" HorizontalAlignment="Right" Click="btn_AddToBasket_Click"/>
+                    Foreground="Wheat" HorizontalAlignment="Left" Click="btn_AddToBasket_Click"/>
+                                        </StackPanel>
+                                    
                                    </StackPanel>
                                 </StackPanel>
                                 

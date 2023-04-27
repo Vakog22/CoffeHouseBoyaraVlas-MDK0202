@@ -1,0 +1,25 @@
+﻿<Page x:Class="CoffeHouseBoyaraVlas.Pages.StatisticsPages.SaleStatsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CoffeHouseBoyaraVlas.Pages.StatisticsPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SaleStatsPage">
+
+    <Grid>
+        <StackPanel>
+            <WrapPanel Height="50">
+                <StackPanel Margin="3">
+                    <Label Content="Сортировать по" FontSize="10"/>
+                    <ComboBox x:Name="cmbSortBy"/>
+                </StackPanel>
+                <Button x:Name="btnSort" Content="Сортировать" Margin="10" Click="btnSort_Click"/>
+                <TextBox x:Name="tbxSearch" Margin="10" Width="300" TextChanged="tbxSearch_TextChanged"/>
+                <Button x:Name="btnUndo" Content="Сбросить" Margin="10" Click="btnUndo_Click"/>
+            </WrapPanel>
+            <DataGrid x:Name="DG" CanUserSortColumns="False"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -113,6 +113,9 @@
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\VW_SaleStats.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BasketPage.xaml.cs">
       <DependentUpon>BasketPage.xaml</DependentUpon>
     </Compile>
@@ -131,14 +134,17 @@
     <Compile Include="Pages\ProductShowPage.xaml.cs">
       <DependentUpon>ProductShowPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StatisticsPage.xaml.cs">
+      <DependentUpon>StatisticsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StatisticsPages\SaleStatsPage.xaml.cs">
+      <DependentUpon>SaleStatsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AccessLevel1\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AccessLevel3\ProductChangeWindow.xaml.cs">
       <DependentUpon>ProductChangeWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\AccessLevel3\StatisticsWindow.xaml.cs">
-      <DependentUpon>StatisticsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AccessLevel1\PaymentWindow.xaml.cs">
       <DependentUpon>PaymentWindow.xaml</DependentUpon>
@@ -173,6 +179,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\StatisticsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StatisticsPages\SaleStatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AccessLevel1\AuthorizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -182,10 +196,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AccessLevel3\ProductChangeWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\AccessLevel3\StatisticsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

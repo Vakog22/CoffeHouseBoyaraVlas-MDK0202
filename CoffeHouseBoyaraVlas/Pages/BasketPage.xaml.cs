@@ -75,21 +75,32 @@ namespace CoffeHouseBoyaraVlas.Pages
                 EFHelper.Context.Sale.Add(sale);
                 EFHelper.Context.SaveChanges();
 
-                SaleProduct saleProduct = new SaleProduct();
+                
 
                 int saleID = EFHelper.Context.Sale.ToList().LastOrDefault().IdSale;
                 foreach (var  prod in BasketHelper.products)
                 {
+                    SaleProduct saleProduct = new SaleProduct();
                     saleProduct.IdProduct = prod.IdProduct;
                     saleProduct.IdSale = saleID;
                     saleProduct.Quantity = prod.Quantity;
                     fullCost += (EFHelper.Context.Product.ToList().Where(i => i.IdProduct == prod.IdProduct).FirstOrDefault().Price) * prod.Quantity;
+                    EFHelper.Context.SaleProduct.Add(saleProduct);
+                     EFHelper.Context.SaveChanges();
+                    prod.Quantity = 0;
 
                 }
-                EFHelper.Context.SaleProduct.Add(saleProduct);
-                EFHelper.Context.SaveChanges();
+                 MessageBox.Show("Вы заплатили "+ fullCost.ToString() + " денег" );
+          ClassHelper.BasketHelper.products.Clear();
+            foreach (var prod in BasketHelper.products)
+            {
+                prod.Quantity = 0;
+                BasketHelper.products.Remove(prod);
             }
-            MessageBox.Show("Вы заплатили "+ fullCost.ToString() + " денег" );
+            EFHelper.Context.SaveChanges();
+            GetListProduct();
+            }
+          
             
         }
     }

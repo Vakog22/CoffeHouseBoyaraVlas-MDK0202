@@ -86,6 +86,18 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "DBCoffee_VlasovBoyarskiy.dbo.VW_SaleStats" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="VW_SaleStats">
+          <Key>
+            <PropertyRef Name="IdSale" />
+          </Key>
+          <Property Name="IdSale" Type="int" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="101" />
+          <Property Name="customer" Type="nvarchar" MaxLength="101" />
+          <Property Name="dateOfSale" Type="datetime" />
+          <Property Name="FullCost" Type="decimal" Precision="38" Scale="2" />
+        </EntityType>
         <Association Name="FK_Client_Account">
           <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <End Role="Client" Type="Self.Client" Multiplicity="*" />
@@ -210,6 +222,15 @@
           <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SaleProduct" EntityType="Self.SaleProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VW_SaleStats" EntityType="Self.VW_SaleStats" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VW_SaleStats].[IdSale] AS [IdSale], 
+    [VW_SaleStats].[employee] AS [employee], 
+    [VW_SaleStats].[customer] AS [customer], 
+    [VW_SaleStats].[dateOfSale] AS [dateOfSale], 
+    [VW_SaleStats].[FullCost] AS [FullCost]
+    FROM [dbo].[VW_SaleStats] AS [VW_SaleStats]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Client_Account" Association="Self.FK_Client_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Client" EntitySet="Client" />
@@ -310,6 +331,7 @@
             <End Role="Sale" EntitySet="Sale" />
             <End Role="SaleProduct" EntitySet="SaleProduct" />
           </AssociationSet>
+          <EntitySet Name="VW_SaleStats" EntityType="DBCoffee_VlasovBoyarskiyModel.VW_SaleStats" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -501,6 +523,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="VW_SaleStats">
+          <Key>
+            <PropertyRef Name="IdSale" />
+          </Key>
+          <Property Name="IdSale" Type="Int32" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="customer" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="dateOfSale" Type="DateTime" Precision="3" />
+          <Property Name="FullCost" Type="Decimal" Precision="38" Scale="2" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -616,6 +648,17 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VW_SaleStats">
+            <EntityTypeMapping TypeName="DBCoffee_VlasovBoyarskiyModel.VW_SaleStats">
+              <MappingFragment StoreEntitySet="VW_SaleStats">
+                <ScalarProperty Name="FullCost" ColumnName="FullCost" />
+                <ScalarProperty Name="dateOfSale" ColumnName="dateOfSale" />
+                <ScalarProperty Name="customer" ColumnName="customer" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+                <ScalarProperty Name="IdSale" ColumnName="IdSale" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

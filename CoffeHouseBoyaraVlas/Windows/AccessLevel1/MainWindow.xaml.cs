@@ -24,6 +24,7 @@ namespace CoffeHouseBoyaraVlas
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool isMenuShow = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -60,6 +61,7 @@ namespace CoffeHouseBoyaraVlas
             }
             else
             {
+                btn_statistics.Visibility = Visibility.Collapsed;
                 btn_clients.Visibility = Visibility.Collapsed;
                 btn_employees.Visibility = Visibility.Collapsed;
             }
@@ -75,6 +77,32 @@ namespace CoffeHouseBoyaraVlas
         {
             Basket basket = new Basket();
             F_MainFrame.Navigate(basket);
+        }
+
+        private void btn_statistics_Click(object sender, RoutedEventArgs e)
+        {
+            StatisticsPage statisticsPage = new StatisticsPage();
+            F_MainFrame.Navigate(statisticsPage);
+        }
+
+        private void btn_menu_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (isMenuShow)
+            {stk_MenuStakPAnnel.Visibility = Visibility.Hidden;
+                grd_Main.ColumnDefinitions.Clear();
+                btn_menu.Content = "→";
+            }
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    grd_Main.ColumnDefinitions.Add(new ColumnDefinition());
+                }
+                stk_MenuStakPAnnel.Visibility = Visibility.Visible;
+                btn_menu.Content = "←";
+            }
+            isMenuShow = !isMenuShow;
         }
     }
 }
