@@ -37,3 +37,13 @@
 <b> Окна сотрудников и клиентов </b>
 ![image](https://user-images.githubusercontent.com/50378141/231679077-8f2a14ee-e879-4d3a-a67c-fa634a56da43.png)
 ![image](https://user-images.githubusercontent.com/50378141/231679113-770de8ad-41c2-4c72-aaa7-570050b9d8c4.png)
+
+<b> Корзина </b>
+![image](https://user-images.githubusercontent.com/50378141/233961995-35ba440c-6d05-4224-897a-e3599ce48f4e.png)
+![image](https://user-images.githubusercontent.com/50378141/233962255-741d5db6-7aef-41aa-beab-3265c7547d53.png)
+![image](https://user-images.githubusercontent.com/50378141/233962378-a0b2069a-bb17-4db8-b8a0-cace7d84a6a1.png)
+<b>Новые записи в базе</b>
+![image](https://user-images.githubusercontent.com/50378141/233962526-639ec012-779a-4eb2-96ee-0291bcf98fb8.png)
+![image](https://user-images.githubusercontent.com/50378141/233963546-08cd1e0d-5b44-4342-903f-8b4ad028356e.png)
+
+
